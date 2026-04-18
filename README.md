@@ -25,7 +25,8 @@ Unlike traditional assistants, OpenWrist is:
 
 ## 🧩 System Architecture
 
-[ Wear OS Watch ](/Main/Summaries/Enzymes)
+```text
+[ Wear OS Watch ]
     ↓
 SpeechRecognizer (voice → text)
     ↓
@@ -33,7 +34,7 @@ OpenWrist App Logic
     ↓
 HTTPS Request
     ↓
-[ OpenClaw API Backend ](</Main/Tech Stuff/Homelabs/Homelab Documentation>)
+[ OpenClaw API Backend ]
     ↓
 Context + Prompt Processing
     ↓
@@ -42,6 +43,7 @@ Token by Token Streaming
 Return text
     ↓
 Watch (UI + TTS Output)
+```
 
 ---
 
@@ -74,13 +76,13 @@ Implementation Strategy:
 - Context window included in every request
 
 Example request structure:
-'''bash
+```bash
 {
   "device": "watch",
   "device_id": "watch_01",
   "query": "scan google.com"
 }
-'''
+```
 
 Backend interpretation example:
 Previous: scan google.com
