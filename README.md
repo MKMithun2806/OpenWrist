@@ -37,9 +37,9 @@ HTTPS Request
     ↓
 Context + Prompt Processing
     ↓
-AI Response
+Token by Token Streaming
     ↓
-Return JSON
+Return text
     ↓
 Watch (UI + TTS Output)
 
@@ -74,11 +74,13 @@ Implementation Strategy:
 - Context window included in every request
 
 Example request structure:
+'''bash
 {
   "device": "watch",
   "device_id": "watch_01",
   "query": "scan google.com"
 }
+'''
 
 Backend interpretation example:
 Previous: scan google.com
